@@ -1,50 +1,142 @@
-# Welcome to your Expo app 👋
+# 🔐 SosmedNet — Secure Auth App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+> **"A good dev builds a feature. A great dev builds a secure experience."** 🦾🔥
 
-## Get started
+Aplikasi React Native (Expo) dengan sistem Login & Register yang aman, lengkap dengan validasi input, keyboard handling, dan UX yang ramah jempol.
 
-1. Install dependencies
+---
 
-   ```bash
-   npm install
-   ```
+## 📸 Capture Running Program
 
-2. Start the app
+> **Screenshot / GIF — tambahkan di sini setelah lo run projectnya!**
 
-   ```bash
-   npx expo start
-   ```
+| Login Screen | Register Screen | Home Screen |
+|---|---|---|
+| ![Login](./screenshots/login.png) | ![Register](./screenshots/register.png) | ![Home](./screenshots/home.png) |
 
-In the output, you'll find options to open the app in a
+> 💡 *Cara ambil screenshot di Expo Go: Shake HP → Screenshot, atau pake emulator AVD/Simulator iOS*
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 🔗 Expo Snack
 
-## Get a fresh project
+> **Link Expo Snack:** [https://snack.expo.dev/@username/sosmednet-auth](https://snack.expo.dev)
+>
+> *(Buka Expo Snack, buat project baru, paste isi file `app/index.js`, `app/register.js`, `app/home.js`, dan `app/_layout.js` ke folder `app/`. Pastikan dependencies sudah ada.)*
 
-When you're ready, run:
+---
 
-```bash
-npm run reset-project
+## 🗂️ Struktur Project
+
+```
+sosmednet-auth-app/
+├── app/
+│   ├── _layout.js      ← Root layout (Expo Router stack)
+│   ├── index.js        ← Screen Login  (route: /)
+│   ├── register.js     ← Screen Register (route: /register)
+│   └── home.js         ← Screen Home (route: /home)
+├── app.json
+├── babel.config.js
+├── package.json
+└── README.md
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+---
 
-## Learn more
+## 🚀 Cara Install & Run
 
-To learn more about developing your project with Expo, look at the following resources:
+### 1. Clone repo
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```bash
+git clone https://github.com/USERNAME/sosmednet-auth-app.git
+cd sosmednet-auth-app
+```
 
-## Join the community
+### 2. Install dependencies
 
-Join our community of developers creating universal apps.
+```bash
+npm install
+```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+### 3. Jalankan project
+
+```bash
+npx expo start
+```
+
+- Scan QR code pake **Expo Go** (Android/iOS)
+- Atau tekan `a` untuk Android Emulator, `i` untuk iOS Simulator
+
+---
+
+## 🛡️ Security Features
+
+| Feature | Implementasi |
+|---|---|
+| **Validasi Email** | RegEx: `/^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$/` |
+| **Validasi Phone** | RegEx: `/^[0-9]{10,}$/` — hanya angka, min 10 digit. Input di-filter real-time. |
+| **Password Match** | Cek `password === confirmPassword` sebelum submit |
+| **Secure Entry** | `secureTextEntry={true}` — password tertutup bintang default |
+| **Toggle Visibility** | Tombol 👁️ untuk show/hide password |
+| **Keyboard Dismiss** | `TouchableWithoutFeedback + Keyboard.dismiss` — tap area luar = keyboard hilang |
+| **Keyboard Avoiding** | `KeyboardAvoidingView` dengan `behavior="padding"` (iOS) / `"height"` (Android) |
+| **Empty Field Guard** | Alert langsung jika ada field kosong sebelum submit |
+| **Password Strength** | Indikator kekuatan password real-time (lemah/lumayan/kuat) |
+| **router.replace()** | Setelah login/register, user tidak bisa back ke form lagi |
+
+---
+
+## 📋 Checklist Pre-Submit
+
+- [x] ✅ **Keyboard Dismiss** — tap area luar input = keyboard hilang (`TouchableWithoutFeedback`)
+- [x] ✅ **Secure Entry** — password tertutup titik/bintang saat diketik
+- [x] ✅ **Validation Feedback** — Alert muncul jika ada field kosong
+- [x] ✅ **Email Regex** — format email divalidasi sebelum submit
+- [x] ✅ **Phone Digits Only** — karakter non-angka diblokir real-time di input
+- [x] ✅ **Password Match** — konfirmasi password dicek, ada visual feedback merah/hijau
+- [x] ✅ **router.replace()** — tidak bisa back ke login setelah masuk home
+- [x] ✅ **KeyboardAvoidingView** — `behavior="height"` untuk Android, `"padding"` untuk iOS
+
+---
+
+## 🔧 Troubleshooting
+
+**Error: "Router must be used within a Router component"**
+```
+✅ Solusi: Pastikan semua file ada di folder app/ 
+   dan run dengan: npx expo start
+```
+
+**Error: "KeyboardAvoidingView not working on Android"**
+```
+✅ Solusi: Sudah di-handle dengan:
+   behavior={Platform.OS === "ios" ? "padding" : "height"}
+```
+
+**Error: Module not found**
+```
+✅ Solusi: Hapus node_modules dan install ulang:
+   rm -rf node_modules && npm install
+```
+
+---
+
+## 🎨 Design System
+
+- **Primary Color**: `#534AB7` (Purple)
+- **Background**: `#F8F7FF` (Light Purple tint)
+- **Font Style**: System default (bold untuk heading)
+- **Corner Radius**: 10–20px untuk komponen form, 28px untuk header curve
+- **Shadow**: Soft purple shadow pada card form
+
+---
+
+## 👤 Author
+
+- **Nama**: [Nama Lo]
+- **NIM/ID**: [NIM Lo]
+- **GitHub**: [https://github.com/USERNAME](https://github.com)
+
+---
+
+*Dibuat dengan ❤️ menggunakan React Native + Expo Router*
