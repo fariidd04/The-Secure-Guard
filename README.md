@@ -28,7 +28,7 @@ Aplikasi React Native (Expo) dengan sistem Login & Register yang aman, lengkap d
 sosmednet-auth-app/
 ├── app/
 │   ├── _layout.js      ← Root layout (Expo Router stack)
-│   ├── index.js        ← Screen Login  (route: /)
+│   ├── login.js        ← Screen Login  (route: /)
 │   ├── register.js     ← Screen Register (route: /register)
 │   └── home.js         ← Screen Home (route: /home)
 ├── app.json
