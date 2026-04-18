@@ -41,7 +41,6 @@ export default function LoginScreen() {
       return;
     }
 
-    // Simulasi login sukses — replace dengan API call beneran
     Alert.alert("Yeay! 🎉", "Login berhasil!", [
       {
         text: "Lanjut",
@@ -63,7 +62,6 @@ export default function LoginScreen() {
         <StatusBar barStyle="dark-content" backgroundColor="#F8F7FF" />
 
         <View style={styles.inner}>
-          {/* Header */}
           <View style={styles.header}>
             <View style={styles.logoCircle}>
               <Text style={styles.logoText}>SN</Text>
@@ -72,7 +70,6 @@ export default function LoginScreen() {
             <Text style={styles.tagline}>Koneksi lo, dunia lo 🌏</Text>
           </View>
 
-          {/* Form */}
           <View style={styles.form}>
             <Text style={styles.label}>Email</Text>
             <TextInput

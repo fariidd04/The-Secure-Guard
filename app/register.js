@@ -39,25 +39,21 @@ export default function RegisterScreen() {
   const handleRegister = () => {
     const { name, email, phone, password, confirmPassword } = form;
 
-    // Cek semua field kosong
     if (!name.trim() || !email.trim() || !phone.trim() || !password || !confirmPassword) {
       Alert.alert("Gak Lengkap nih!", "Semua field wajib diisi ya.");
       return;
     }
 
-    // Validasi nama minimal 2 karakter
     if (name.trim().length < 2) {
       Alert.alert("Nama Terlalu Pendek", "Nama minimal 2 karakter.");
       return;
     }
 
-    // Validasi email
     if (!EMAIL_REGEX.test(email.trim())) {
       Alert.alert("Email Gak Valid", "Format email salah. Contoh: nama@email.com");
       return;
     }
 
-    // Validasi phone: hanya angka, min 10 digit
     const cleanPhone = phone.replace(/\s/g, "");
     if (!PHONE_REGEX.test(cleanPhone)) {
       Alert.alert(
@@ -67,19 +63,16 @@ export default function RegisterScreen() {
       return;
     }
 
-    // Validasi password min 6 karakter
     if (password.length < 6) {
       Alert.alert("Password Lemah", "Password minimal 6 karakter.");
       return;
     }
 
-    // Cek password match
     if (password !== confirmPassword) {
       Alert.alert("Password Gak Cocok!", "Password dan Konfirmasi Password harus sama. Cek lagi ya!");
       return;
     }
 
-    // Sukses
     Alert.alert("Registrasi Berhasil! 🎉", `Selamat datang, ${name.trim()}! Sekarang lo bisa login.`, [
       {
         text: "Login Sekarang",
@@ -124,7 +117,6 @@ export default function RegisterScreen() {
           keyboardShouldPersistTaps="handled"
           showsVerticalScrollIndicator={false}
         >
-          {/* Header */}
           <View style={styles.header}>
             <TouchableOpacity style={styles.backBtn} onPress={() => router.back()}>
               <Text style={styles.backText}>← Kembali</Text>
@@ -133,10 +125,7 @@ export default function RegisterScreen() {
             <Text style={styles.subtitle}>Daftar sekarang, gratis selamanya 🚀</Text>
           </View>
 
-          {/* Form */}
           <View style={styles.form}>
-
-            {/* Nama */}
             <Text style={styles.label}>Nama Lengkap</Text>
             <TextInput
               style={styles.input}
@@ -148,7 +137,6 @@ export default function RegisterScreen() {
               returnKeyType="next"
             />
 
-            {/* Email */}
             <Text style={styles.label}>Email</Text>
             <TextInput
               style={styles.input}
@@ -162,7 +150,6 @@ export default function RegisterScreen() {
               returnKeyType="next"
             />
 
-            {/* Phone */}
             <Text style={styles.label}>Nomor HP</Text>
             <TextInput
               style={styles.input}
@@ -170,7 +157,6 @@ export default function RegisterScreen() {
               placeholderTextColor="#AAAAAA"
               value={form.phone}
               onChangeText={(v) => {
-                // Filter: hanya angka yang masuk
                 const numOnly = v.replace(/[^0-9]/g, "");
                 updateField("phone", numOnly);
               }}
@@ -180,7 +166,6 @@ export default function RegisterScreen() {
             />
             <Text style={styles.hint}>Hanya angka, minimal 10 digit</Text>
 
-            {/* Password */}
             <Text style={styles.label}>Password</Text>
             <View style={styles.passwordWrapper}>
               <TextInput
@@ -199,7 +184,6 @@ export default function RegisterScreen() {
             </View>
             <PasswordStrength pass={form.password} />
 
-            {/* Confirm Password */}
             <Text style={styles.label}>Konfirmasi Password</Text>
             <View style={[
               styles.passwordWrapper,

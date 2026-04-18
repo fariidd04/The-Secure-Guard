@@ -20,7 +20,8 @@ Aplikasi React Native (Expo) dengan sistem Login & Register yang aman, lengkap d
 
 ## 🔗 Expo Snack
 
-> **Link Expo Snack:** [https://snack.expo.dev/@fariid.dd/the-secure-guard?platform=android]
+> **Link Expo Snack:** [https://snack.expo.dev/@fariid.dd/the-secure-guard?platform=android](https://snack.expo.dev)
+>
 
 ## 🗂️ Struktur Project
 
@@ -130,7 +131,7 @@ npx expo start
 ## 👤 Author
 
 - **Nama**: [Muhammad Farid]
-- **GitHub**: [https://github.com/fariidd04]
+- **GitHub**: [https://github.com/fariidd04](https://github.com)
 
 ---
 

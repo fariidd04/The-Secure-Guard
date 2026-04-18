@@ -43,7 +43,6 @@ export default function HomeScreen() {
     <View style={styles.container}>
       <StatusBar barStyle="light-content" backgroundColor="#534AB7" />
 
-      {/* Header */}
       <View style={styles.headerBg}>
         <View style={styles.header}>
           <View>
@@ -57,7 +56,6 @@ export default function HomeScreen() {
           </TouchableOpacity>
         </View>
 
-        {/* Stats bar */}
         <View style={styles.statsRow}>
           <View style={styles.statItem}>
             <Text style={styles.statNum}>240</Text>
@@ -78,7 +76,6 @@ export default function HomeScreen() {
 
       <ScrollView style={styles.body} showsVerticalScrollIndicator={false}>
 
-        {/* Welcome card */}
         <View style={styles.welcomeCard}>
           <Text style={styles.welcomeEmoji}>🎉</Text>
           <Text style={styles.welcomeTitle}>Akun lo sudah aktif!</Text>
@@ -87,7 +84,6 @@ export default function HomeScreen() {
           </Text>
         </View>
 
-        {/* Grid cards */}
         <Text style={styles.sectionTitle}>Aktivitas Lo</Text>
         <View style={styles.grid}>
           {cards.map((card, i) => (
@@ -99,7 +95,6 @@ export default function HomeScreen() {
           ))}
         </View>
 
-        {/* Security badge */}
         <View style={styles.securityBadge}>
           <Text style={styles.securityIcon}>🛡️</Text>
           <View style={styles.securityText}>
@@ -109,7 +104,6 @@ export default function HomeScreen() {
           <View style={styles.securityDot} />
         </View>
 
-        {/* Logout */}
         <TouchableOpacity style={styles.btnLogout} onPress={handleLogout}>
           <Text style={styles.btnLogoutText}>🚪  Logout</Text>
         </TouchableOpacity>
