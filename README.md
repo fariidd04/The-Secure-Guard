@@ -45,7 +45,7 @@ sosmednet-auth-app/
 
 ```bash
 git clone https://github.com/fariidd04/The-Secure-Guard.git
-cd sosmednet-auth-app
+cd The-Secure-Guard
 ```
 
 ### 2. Install dependencies
