@@ -1,14 +1,10 @@
 # 🔐 SosmedNet — Secure Auth App
 
-> **"A good dev builds a feature. A great dev builds a secure experience."** 🦾🔥
-
 Aplikasi React Native (Expo) dengan sistem Login & Register yang aman, lengkap dengan validasi input, keyboard handling, dan UX yang ramah jempol.
 
 ---
 
 ## 📸 Capture Running Program
-
-> **Screenshot / GIF — tambahkan di sini setelah lo run projectnya!**
 
 | Login Screen | Register Screen | Home Screen |
 |---|---|---|
