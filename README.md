@@ -12,9 +12,9 @@ Aplikasi React Native (Expo) dengan sistem Login & Register yang aman, lengkap d
 
 | Login Screen | Register Screen | Home Screen |
 |---|---|---|
-| ![Login](./screenshots/login.png) | ![Register](./screenshots/register.png) | ![Home](./screenshots/home.png) |
+| ![Login](./assets/images/Login.jpeg) | ![Register](./assets/images/screenshots/Register.jpeg) | ![Home](./assets/images/screenshots/Home.jpeg) |
 
-> 💡 *Cara ambil screenshot di Expo Go: Shake HP → Screenshot, atau pake emulator AVD/Simulator iOS*
+
 
 ---
 
