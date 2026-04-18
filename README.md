@@ -131,7 +131,7 @@ npx expo start
 ## 👤 Author
 
 - **Nama**: [Muhammad Farid]
-- **GitHub**: (https://github.com/fariidd04)
+- **GitHub**: [fariidd04](https://github.com/fariidd04)
 
 ---
 
