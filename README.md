@@ -12,8 +12,7 @@ Aplikasi React Native (Expo) dengan sistem Login & Register yang aman, lengkap d
 
 | Login Screen | Register Screen | Home Screen |
 |---|---|---|
-| ![Login](<img width="1220" height="2712" alt="Login" src="https://github.com/user-attachments/assets/28e5c041-ac86-4779-93ce-def6b21f27a3" />
-) | ![Register](./assets/images/screenshots/Register.jpeg) | ![Home](./assets/images/screenshots/Home.jpeg) |
+| ![Login](./assets/images/Login.jpg) | ![Register](./assets/images/screenshots/Register.jpg) | ![Home](./assets/images/screenshots/Home.jpg) |
 
 
 
