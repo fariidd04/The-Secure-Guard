@@ -20,11 +20,7 @@ Aplikasi React Native (Expo) dengan sistem Login & Register yang aman, lengkap d
 
 ## 🔗 Expo Snack
 
-> **Link Expo Snack:** [https://snack.expo.dev/@username/sosmednet-auth](https://snack.expo.dev)
->
-> *(Buka Expo Snack, buat project baru, paste isi file `app/index.js`, `app/register.js`, `app/home.js`, dan `app/_layout.js` ke folder `app/`. Pastikan dependencies sudah ada.)*
-
----
+> **Link Expo Snack:** [https://snack.expo.dev/@fariid.dd/the-secure-guard?platform=android]
 
 ## 🗂️ Struktur Project
 
@@ -48,7 +44,7 @@ sosmednet-auth-app/
 ### 1. Clone repo
 
 ```bash
-git clone https://github.com/USERNAME/sosmednet-auth-app.git
+git clone https://github.com/fariidd04/The-Secure-Guard.git
 cd sosmednet-auth-app
 ```
 
@@ -133,9 +129,8 @@ npx expo start
 
 ## 👤 Author
 
-- **Nama**: [Nama Lo]
-- **NIM/ID**: [NIM Lo]
-- **GitHub**: [https://github.com/USERNAME](https://github.com)
+- **Nama**: [Muhammad Farid]
+- **GitHub**: [https://github.com/fariidd04]
 
 ---
 
